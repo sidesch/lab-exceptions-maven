@@ -57,7 +57,7 @@ public class Quadratic {
    * @return the function as a string
    */
   public String toString() {
-    return String.format("%dx^2 + %dx + %d", a, b, c);
+    return String.format("%fx^2 + %fx + %f", a, b, c);
   } // toString()
 
   // +---------+-----------------------------------------------------
@@ -73,7 +73,7 @@ public class Quadratic {
    * @return the expression as a string
    */
   public String toString(double val) {
-    return String.format("%d*%d^2 + %d*%d + %d", a, val, b, val, c);
+    return String.format("%f*%f^2 + %f*%f + %f", a, val, b, val, c);
   } // toString(double)
 
   /**
@@ -95,7 +95,8 @@ public class Quadratic {
    *   is only one).
    */
   public double smallerRoot() {
-    return 0; // STUB
+    double sqrt = Math.sqrt(this.b*this.b - 4*this.c*this.a);
+    return ((0-b -sqrt)/(this.a*2));
   } // smallerRoot
 
   /**
